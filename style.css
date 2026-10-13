@@ -1,0 +1,123 @@
+/* Juzzle's legal pages: the app's paper, mushaf teal and gold; a reading
+   column with a quiet contents rail on wide screens. The fonts are served
+   from here (SIL Open Font License, see fonts/), so visiting these pages
+   sends nothing to anyone else. */
+@font-face { font-family: "Outfit"; src: url("fonts/Outfit-500.ttf") format("truetype"); font-weight: 400 549; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("fonts/Outfit-600.ttf") format("truetype"); font-weight: 550 649; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("fonts/Outfit-700.ttf") format("truetype"); font-weight: 650 900; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/Literata-Regular.ttf") format("truetype"); font-weight: 300 499; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/Literata-Medium.ttf") format("truetype"); font-weight: 500 900; font-display: swap; }
+:root {
+  --paper: #F7EFDD;
+  --sheet: #FBF7EE;
+  --ink: #102B27;
+  --teal: #0F3D36;
+  --muted: #5C6B66;
+  --rule: #E3D8C2;
+  --gold: #B8862F;
+  --gold-soft: rgba(201, 151, 58, 0.14);
+  --display: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0B1A1D; --sheet: #102326; --ink: #ECE5D6; --teal: #F4EFE4; --muted: #9FB1AE;
+    --rule: #1F3A3E; --gold: #F1C46B; --gold-soft: rgba(241, 196, 107, 0.12); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0B1A1D; --sheet: #102326; --ink: #ECE5D6; --teal: #F4EFE4; --muted: #9FB1AE;
+  --rule: #1F3A3E; --gold: #F1C46B; --gold-soft: rgba(241, 196, 107, 0.12); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.7 var(--body);
+  padding-inline: 16px;
+}
+a { color: var(--teal); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+.masthead {
+  max-width: 1040px; margin: 0 auto; padding-block: 28px 8px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--teal); }
+.brand svg { height: 44px; width: auto; }
+.brand svg .ink { fill: var(--teal); }
+.brand svg .gold { fill: var(--gold); }
+.brand span { font: 700 22px/1 var(--display); letter-spacing: -0.3px; }
+.masthead nav { display: flex; gap: 18px; font: 500 15px/1 var(--display); }
+.masthead nav a { text-decoration: none; color: var(--muted); padding: 6px 0; }
+.masthead nav a[aria-current="page"] { color: var(--teal); border-bottom: 2px solid var(--gold); }
+
+.page {
+  max-width: 1040px; margin: 0 auto; padding-block: 24px 64px;
+  display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 48px; align-items: start;
+}
+article { min-width: 0; max-width: 68ch; }
+.eyebrow { font: 600 13px/1.4 var(--display); letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin: 0; }
+h1 { font: 700 clamp(32px, 5vw, 44px)/1.1 var(--display); letter-spacing: -0.02em; color: var(--teal); margin: 6px 0 10px; text-wrap: balance; }
+.dates { color: var(--muted); font: 15px/1.5 var(--display); margin: 0 0 28px; }
+h2 {
+  font: 650 23px/1.25 var(--display); color: var(--teal); margin: 44px 0 10px; text-wrap: balance;
+  scroll-margin-top: 20px;
+}
+h3 { font: 600 18px/1.35 var(--display); color: var(--teal); margin: 26px 0 6px; }
+p, li { margin: 0 0 12px; }
+ul { padding-inline-start: 22px; margin: 0 0 14px; }
+li::marker { color: var(--gold); }
+strong { color: var(--teal); font-weight: 650; }
+
+.summary {
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 18px;
+  padding: 22px 24px 10px; margin: 0 0 8px;
+}
+.summary h2 { margin-top: 0; font-size: 19px; }
+.summary ul { list-style: none; padding: 0; }
+.summary li { position: relative; padding-inline-start: 28px; }
+.summary li::before {
+  content: ""; position: absolute; inset-inline-start: 2px; top: 0.62em; width: 12px; height: 12px;
+  background: var(--gold); clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+}
+.note { border-inline-start: 3px solid var(--gold); background: var(--gold-soft); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 16px 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 15.5px; line-height: 1.5; }
+th, td { text-align: start; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+th { font: 600 13px/1.4 var(--display); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+.rail { position: sticky; top: 20px; font: 14.5px/1.5 var(--display); }
+.rail p { font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-size: 12.5px; margin: 0 0 8px; }
+.rail ol { list-style: none; padding: 0; margin: 0; border-inline-start: 1px solid var(--rule); }
+.rail li { margin: 0; }
+.rail a { display: block; padding: 5px 0 5px 14px; color: var(--muted); text-decoration: none; }
+.rail a:hover { color: var(--teal); }
+
+footer {
+  max-width: 1040px; margin: 0 auto; padding-block: 24px 40px; border-top: 1px solid var(--rule);
+  color: var(--muted); font: 14.5px/1.6 var(--display);
+}
+
+/* The home page's two cards. */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 28px 0 8px; }
+.card {
+  display: block; background: var(--sheet); border: 1px solid var(--rule); border-radius: 18px; padding: 22px;
+  text-decoration: none; color: var(--ink);
+}
+.card:hover { border-color: var(--gold); }
+.card h2 { margin: 0 0 6px; font-size: 21px; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+@media (max-width: 860px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .rail { display: none; }
+  .cards { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

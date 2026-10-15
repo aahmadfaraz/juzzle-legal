@@ -16,12 +16,13 @@
 <article>
   <p class="eyebrow">Juzzle</p>
   <h1>Privacy Policy</h1>
-  <p class="dates">Effective 13 October 2026 · Last updated 13 October 2026</p>
+  <p class="dates">Effective 13 October 2026 · Last updated 16 October 2026</p>
 
   <section class="summary" aria-label="In short">
     <h2>In short</h2>
     <ul>
-      <li>Juzzle has <strong>no accounts, no ads, no analytics and no tracking</strong>.</li>
+      <li>Juzzle has <strong>no accounts, no ads and no tracking</strong>, and never uses your device's advertising identifier.</li>
+      <li>To improve the app, it sends <strong>anonymous usage statistics and crash reports</strong> to Google Firebase. They never include your name or anything you type, and you can turn each off in Settings.</li>
       <li>Your progress, settings and the name you choose are <strong>stored only on your device</strong>. We never receive them.</li>
       <li>When you play a recitation, the audio is streamed from <strong>EveryAyah.com</strong>, which sees your device's IP address, as any website would.</li>
       <li>When you share a result, an ayah or a duel, <strong>you choose</strong> where it goes.</li>
@@ -44,6 +45,7 @@
         <tr><td>Your app language, translation, script and other settings</td><td>To show the app the way you set it</td></tr>
         <tr><td>Your progress: daily results, scores, XP, level, streaks, surah mastery, practice bests and duel history</td><td>To keep your streak, show your journey and let you pick up where you left off</td></tr>
         <tr><td>Whether you have finished the introduction</td><td>So it shows only once</td></tr>
+        <tr><td>Your daily reminder choice and time, and when we last asked you to rate the app</td><td>To remind you only if you asked, and to ask for a rating rarely</td></tr>
       </tbody>
     </table>
   </div>
@@ -54,6 +56,18 @@
   <h3>Recitation audio</h3>
   <p>The app does not include recitation audio. When you play a recitation, the app requests the audio file for that ayah from <a href="https://everyayah.com" rel="noopener">EveryAyah.com</a>, a third-party service that hosts Quran recitations. Like any website, EveryAyah.com receives your device's IP address and which audio file was requested, and may keep standard server logs under its own practices. No name, account or identifier from Juzzle is sent with these requests. Your device may keep a temporary copy of recently played audio. If you never play a recitation, no request is made.</p>
 
+  <h3>Usage statistics and crash reports (Google Firebase)</h3>
+  <p>To find out which parts of Juzzle are used and to fix problems, the app uses two Google Firebase services, which Google provides to us as a processor under its data processing terms:</p>
+  <ul>
+    <li><strong>Usage statistics</strong> (Google Analytics for Firebase): events such as starting or finishing the daily puzzle, a round's mode, score and time, practice sessions, duels started or finished, sharing (only that you shared, never what), opening the reader, a recitation that failed to load, and changes to settings. Each comes with the app version, your device model and operating system, your app language, translation and script, and a random identifier for this installation of the app. Google works out an approximate region from your IP address and doesn't store the IP address.</li>
+    <li><strong>Crash reports</strong> (Firebase Crashlytics): when something goes wrong, a technical report of what failed (the error and the code involved), with the app version, device model, operating system and a random identifier for this installation.</li>
+  </ul>
+  <p>They <strong>never</strong> include your name, the ayat or translations you were shown, duel codes, anything you type, your contacts or precise location, or your device's advertising identifier. They aren't used for advertising, and they aren't linked to anything that identifies you. Usage statistics are kept for 14 months and crash reports for 90 days, on Google's servers, possibly outside your country.</p>
+  <p>You can turn each off in <strong>Settings › Privacy</strong> at any time; collection stops straight away.</p>
+
+  <h3>App settings from us (Firebase Remote Config)</h3>
+  <p>About twice a day, the app asks Firebase whether we've switched any features on or off (for example, to turn off a feature that's misbehaving). This happens even if you turn off usage statistics, because it's how the app learns which features to show. The request includes a random identifier for this installation of the app, the app and operating system versions, your device's country code, language and time zone, and nothing else.</p>
+
   <h3>Things you share</h3>
   <p>Juzzle lets you share a daily result, an Ayah of the day image or a duel challenge through your device's share sheet. Nothing is shared unless you tap Share and choose where it goes, and it goes only to the app or people you choose.</p>
   <ul>
@@ -63,16 +77,22 @@
   </ul>
   <p>Once shared, what you sent is handled by the app or service you sent it through, under that service's own terms and policies.</p>
 
+  <h3>Emails you choose to send</h3>
+  <p><strong>Send feedback</strong> and <strong>Report a content issue</strong> open your own email app with a draft to us. The draft includes the app version, your operating system, your app language, translation and script, and, if you report from the reader, the page you were on. Nothing is sent unless you send the email yourself; see section 5.</p>
+
+  <h3>Daily reminder</h3>
+  <p>If you turn on the daily reminder, it's scheduled by your device itself, as notifications on your phone. Nothing is sent to us or anyone else, and your device asks your permission first. You can turn it off in Settings, or in your device's notification settings.</p>
+
   <h3>These web pages</h3>
   <p>These pages are hosted on GitHub Pages. Like any web host, GitHub may record visitors' IP addresses for security and to keep the service running, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>. The pages themselves use no cookies, analytics or tracking, and load nothing from any other site.</p>
 
   <h3>The app stores</h3>
-  <p>You download Juzzle from Apple's App Store or Google Play. Apple and Google process information about downloads and devices under their own privacy policies. If you have agreed in your device settings to share diagnostics with app developers, they may give us crash reports and anonymous usage statistics, which we use only to fix problems and improve the app.</p>
+  <p>You download Juzzle from Apple's App Store or Google Play. Apple and Google process information about downloads and devices under their own privacy policies. If you have agreed in your device settings to share diagnostics with app developers, they may give us crash reports and anonymous usage statistics, which we use only to fix problems and improve the app. Now and then the app may show the store's own rating prompt; Apple or Google handle it, and we don't learn whether or how you rated.</p>
 
   <h2 id="dont">4. What we don't do</h2>
   <ul>
-    <li>We don't run servers that collect your data, and we have no user database.</li>
-    <li>We don't use advertising, analytics or tracking tools, and we don't use your device's advertising identifier.</li>
+    <li>We don't run our own servers, and we have no user database or accounts. The only data that leaves the app for us is the anonymous statistics and crash reports described above.</li>
+    <li>We don't use advertising or tracking tools, and we don't use your device's advertising identifier.</li>
     <li>We don't track you across other companies' apps or websites.</li>
     <li>We don't sell or rent personal information, and we don't share it for advertising.</li>
     <li>We don't access your location, contacts, photos, camera or microphone.</li>
@@ -83,6 +103,8 @@
 
   <h2 id="control">6. Your choices and control</h2>
   <ul>
+    <li><strong>Turn off usage statistics or crash reports</strong> in Settings › Privacy.</li>
+    <li><strong>Turn the daily reminder on or off</strong>, or change its time, in Settings.</li>
     <li><strong>Change or remove your name</strong> in Settings at any time.</li>
     <li><strong>Erase your progress</strong> with Reset progress in Settings. This erases your XP, streaks, surah mastery, daily history and duels, and cannot be undone.</li>
     <li><strong>Delete everything</strong> Juzzle has stored by uninstalling the app. Your device's own backups (such as iCloud or Google backup) may keep a copy under your account's backup settings.</li>
@@ -91,14 +113,14 @@
 
   <h2 id="rights">7. Your rights</h2>
   <p>Depending on where you live, you may have rights over your personal information, such as the right to access, correct or delete it, to object to or restrict its use, to receive a copy of it, and to complain to a data protection authority. These include rights under the EU and UK General Data Protection Regulation (GDPR), the UAE Personal Data Protection Law, and US state privacy laws such as the California Consumer Privacy Act.</p>
-  <p>Because Juzzle keeps your information on your device, you can see, change and delete it yourself, as described above. The only personal information we may hold is an email you sent us; to exercise any right over it, email <a href="mailto:juzzle.app@gmail.com">juzzle.app@gmail.com</a> and we will respond within 30 days. We will never treat you differently for exercising your rights.</p>
-  <p>Where the GDPR applies, the legal basis for answering your email is our legitimate interest in responding to people who contact us, and the steps you ask us to take.</p>
+  <p>Because Juzzle keeps your information on your device, you can see, change and delete it yourself, as described above. Usage statistics and crash reports aren't linked to your name or email, so we usually can't tell which are yours; turning them off in Settings stops collection, and what was already collected is deleted after the periods above. The other personal information we may hold is an email you sent us. To exercise any right, email <a href="mailto:juzzle.app@gmail.com">juzzle.app@gmail.com</a> and we will respond within 30 days. We will never treat you differently for exercising your rights.</p>
+  <p>Where the GDPR applies, our legal basis for usage statistics and crash reports is our legitimate interest in keeping Juzzle working and improving it, balanced by the switches in Settings that let you object at any time; for answering your email, it is our legitimate interest in responding to people who contact us, and the steps you ask us to take.</p>
 
   <h2 id="children">8. Children</h2>
-  <p>Juzzle is made for a general audience and is suitable for families, but it is not directed at children under 13. Juzzle does not collect personal information from anyone through the app. If a child has emailed us and a parent or guardian would like that message deleted, please contact us and we will delete it.</p>
+  <p>Juzzle is made for a general audience and is suitable for families, but it is not directed at children under 13. The app doesn't ask anyone for names, contact details or other information that identifies them; usage statistics and crash reports are anonymous and can be turned off in Settings. If a child has emailed us and a parent or guardian would like that message deleted, please contact us and we will delete it.</p>
 
   <h2 id="security">9. Security and storage</h2>
-  <p>Your progress is protected by your device's own security, so we recommend keeping a passcode or other screen lock on it. Recitation audio is requested over an encrypted (HTTPS) connection. Juzzle is available worldwide; the only information we may hold ourselves is email, which is stored by Google, possibly outside your country.</p>
+  <p>Your progress is protected by your device's own security, so we recommend keeping a passcode or other screen lock on it. Recitation audio, usage statistics, crash reports and app settings all travel over encrypted (HTTPS) connections. Juzzle is available worldwide; our email, and the statistics and crash reports, are stored by Google, possibly outside your country.</p>
 
   <h2 id="changes">10. Changes to this policy</h2>
   <p>We may update this policy, for example if we add features such as accounts, friends or leaderboards. If a change affects what information Juzzle collects, we will update this page before the change reaches the app, and tell you in the app. The date at the top shows when it last changed.</p>
